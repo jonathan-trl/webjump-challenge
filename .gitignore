@@ -1,3 +1,37 @@
-/node_modules
+# dependencies
+/public/.pnp
+/public/.pnp.js
+/public/.yarn/install-state.gz
+
+# testing
+/public/coverage
+
+# next.js
+/public/.next/
+/public/out/
+
+# production
+/public/build
+
+# misc
+/public/.DS_Store
+/public/*.pem
+
+# debug
+/public/npm-debug.log*
+/public/yarn-debug.log*
+/public/yarn-error.log*
+
+# local env files
+/public/.env*.local
+
+# vercel
+/public/.vercel
+
+# typescript
+/public/*.tsbuildinfo
+/public/next-env.d.ts
+
+node_modules
 npm-debug.log
 *.swp
