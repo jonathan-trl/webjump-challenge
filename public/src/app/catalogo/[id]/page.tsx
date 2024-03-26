@@ -42,7 +42,7 @@ const page = async ({ params, searchParams }: PageProps) => {
     <>
       <Breadcrumb category={category} />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-10">
-        <FilterProducts products={products} />
+        <FilterProducts categoryId={params.id} products={products} />
         <div className="md:col-span-7">
           <HeaderProducts category={category} />
 

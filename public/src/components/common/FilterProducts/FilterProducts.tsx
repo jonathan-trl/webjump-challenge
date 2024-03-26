@@ -1,17 +1,21 @@
 import { filterTypes } from '@/config/filters'
 import { ProductsResponse } from '@/types/product'
-import { CategoriesList } from '../CategoriesList'
 import Link from 'next/link'
+import { CategoriesList } from '../CategoriesList'
 
 type FilterProductsProps = {
   products: ProductsResponse
+  categoryId: string
 }
 
-export const FilterProducts = ({ products }: FilterProductsProps) => {
+export const FilterProducts = ({
+  products,
+  categoryId,
+}: FilterProductsProps) => {
   const colors: Record<string, string> = {
     Preta: 'bg-gray-900',
     Laranja: 'bg-orange-500',
-    Amarela: 'bg-yellow-400', 
+    Amarela: 'bg-yellow-400',
     Cinza: 'bg-gray-400',
     Azul: 'bg-blue-500',
     Rosa: 'bg-pink-500',
@@ -35,9 +39,14 @@ export const FilterProducts = ({ products }: FilterProductsProps) => {
   return (
     <aside className="md:col-span-3">
       <div className="border border-gray-200 px-5 pb-8 pt-4">
-        <span className="text-2xl font-bold uppercase text-red-600">
-          Filtre por
-        </span>
+        <div className="flex flex-wrap items-center justify-between">
+          <span className="text-2xl font-bold uppercase text-red-600">
+            Filtre por
+          </span>
+          <Link className="text-blue-500" href={`/catalogo/${categoryId}`}>
+            Limpar
+          </Link>
+        </div>
         <div className="mt-5">
           <p className="mb-3 text-lg font-bold text-indigo-900">Categorias</p>
           <ul className="list-disc space-y-1 px-5 text-base text-gray-700">
