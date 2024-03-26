@@ -24,6 +24,11 @@ git clone https://JonathanCr34234@bitbucket.org/jonathan-carvalho-trl/assessment
 cd assessment-frontend
 ```
 
+### Vá para branch `desafio`:
+```bash
+git checkout desafio
+```
+
 
 ### Instale as dependências na raiz do projeto
 ```bash
@@ -31,6 +36,7 @@ npm install
 # ou
 yarn install
 ```
+
 ### Rode a api
 #### A api estará disponível em `http://localhost:8888`.
 ```bash
