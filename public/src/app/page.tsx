@@ -1,29 +1,26 @@
-import { filterCategories } from '@/config/filters'
+import { CategoriesList } from '@/components/common/CategoriesList'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
-      <div className="grid grid-cols-10 gap-6">
-        <div className="col-span-2 bg-gray-200">
+      <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-10 lg:grid-cols-12">
+        <div className="hidden h-[357px] bg-gray-200 md:col-span-3 md:block lg:col-span-3 xl:col-span-2">
           <ul className="list-disc space-y-1 px-10 py-5 text-base text-black">
             <li>
-              <a href="#">Página inicial</a>
+              <Link href="/">Página inicial</Link>
             </li>
-            {filterCategories.map((category) => (
-              <li key={category.id}>
-                <a href="#">{category.label}</a>
-              </li>
-            ))}
+            <CategoriesList />
             <li>
               <a href="#">Contato</a>
             </li>
           </ul>
         </div>
-        <div className="col-span-7">
+        <div className="md:col-span-7 lg:col-span-9 xl:col-span-10">
           <div className="h-[281px] bg-gray-400"></div>
           <div className="mt-4">
             <h1 className="text-[26px]">Seja bem-vindo!</h1>
-            <p>
+            <p className="text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
