@@ -19,6 +19,8 @@ const page = async ({ params, searchParams }: PageProps) => {
 
   const itemsPerPage = 8
 
+  products.items = products.items.sort((a, b) => a.price - b.price) // Filtrado produtos pelo menor preço
+
   let filteredProducts = filterProducts(products.items, searchParams)
 
   const { totalPages, currentPage, currentProducts } = paginateProducts(

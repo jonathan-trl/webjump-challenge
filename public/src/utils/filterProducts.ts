@@ -40,7 +40,5 @@ export const filterProducts = (
     filteredProducts = products
   }
 
-  filteredProducts = filteredProducts.sort((a, b) => a.price - b.price) // Filtrado produtos pelo menor preço
-
   return filteredProducts
 }
