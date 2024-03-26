@@ -6,10 +6,10 @@ Este é o desafio da Webjump, uma empresa de tecnologia que desenvolve projetos 
 
 ## Tecnologias Utilizadas
 - [Next.js 14](https://nextjs.org/) - Framework React para desenvolvimento de aplicações web.
-  - O Next.js 14 foi usado neste projeto pois identifiquei a necessidade de rotas, devido a isso utilizei o Next.js pois oferece um sistema de rotas simples e eficiente.
-  - Também utilizei o Next.js 14 devido a renderização pelo lado do servidor, que permite que o conteúdo da aplicação seja pré-renderizado no servidor antes de ser enviado ao navegador do usuário. Isso resulta em páginas que carregam mais rapidamente e são mais acessíveis para mecanismos de busca como o Google.
+    - O Next.js 14 foi usado neste projeto pois identifiquei a necessidade de rotas, devido a isso utilizei o Next.js pois oferece um sistema de rotas simples e eficiente.
+    - Também utilizei o Next.js 14 devido a renderização pelo lado do servidor, que permite que o conteúdo da aplicação seja pré-renderizado no servidor antes de ser enviado ao navegador do usuário. Isso resulta em páginas que carregam mais rapidamente e são mais acessíveis para mecanismos de busca como o Google.
 - [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitário para estilização rápida e eficiente.
-  - O Tailwind CSS foi utilizado neste projeto devido a sua capacidade de acelerar o desenvolvimento com classes já definidas e também devido a necessidade da criação de novos padrões visuais, como, cores, espaçamentos e tamanhos de tela
+    - O Tailwind CSS foi utilizado neste projeto devido a sua capacidade de acelerar o desenvolvimento com classes já definidas e também devido a necessidade da criação de novos padrões visuais, como, cores, espaçamentos e tamanhos de tela
 
 
 ## Instalação
@@ -20,11 +20,11 @@ git clone https://JonathanCr34234@bitbucket.org/jonathan-carvalho-trl/assessment
 ```
 
 ### Acesse o projeto:
-```bash
+```
 cd assessment-frontend
 ```
 
-### Vá para branch `desafio`:
+### Vá para branch **desafio**:
 ```bash
 git checkout desafio
 ```
