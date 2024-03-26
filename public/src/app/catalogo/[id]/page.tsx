@@ -5,6 +5,7 @@ import { Pagination } from '@/components/common/Pagination'
 import { Product } from '@/components/common/Product'
 import { categoryService } from '@/services/categoryService'
 import { filterProducts } from '@/utils/filterProducts'
+import { paginateProducts } from '@/utils/paginateProducts'
 
 type PageProps = {
   params: { id: string }
@@ -16,22 +17,14 @@ const page = async ({ params, searchParams }: PageProps) => {
   const { items: categories } = await categoryService.getAll()
   const page = searchParams.page as string
 
-  products.items = products.items.sort((a, b) => a.price - b.price)
+  const itemsPerPage = 8
 
   let filteredProducts = filterProducts(products.items, searchParams)
 
-  const itemsPerPage = 8
-
-  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage)
-
-  const currentPage = page ?? '1'
-
-  const indexOfLastItem = parseInt(currentPage) * itemsPerPage
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage
-
-  let currentProducts = filteredProducts.slice(
-    indexOfFirstItem,
-    indexOfLastItem,
+  const { totalPages, currentPage, currentProducts } = paginateProducts(
+    filteredProducts,
+    itemsPerPage,
+    page,
   )
 
   const category = categories.find(
