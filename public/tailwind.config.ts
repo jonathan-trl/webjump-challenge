@@ -24,6 +24,13 @@ const config: Config = {
       fontFamily: {
         'opens-sans': ['Open Sans', 'sans-serif'],
       },
+      screens: {
+        sm: '320px',
+        '2xl': '1440px',
+      },
+      container: {
+        padding: '1rem',
+      },
     },
     container: {
       center: true,
