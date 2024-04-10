@@ -1,5 +1,5 @@
 # Webjump - Frontend
-Este é o desafio da Webjump, uma empresa de tecnologia que desenvolve projetos que inspiram inovação e desafios.
+Loja online onde os produtos são buscados dinamicamente de uma API, e podem ser filtrados pela URL.
 
 ## Requisitos
 - Node
